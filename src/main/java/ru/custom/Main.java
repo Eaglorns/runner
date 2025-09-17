@@ -20,12 +20,10 @@ public class Main {
                 serverProcess = new ProcessBuilder(
                         "java",
                         "-Xms8G", "-Xmx18G",
-                        "-XX:+UseStringDeduplication",
-                        "-XX:+UseCompressedOops",
-                        "-XX:+UseCodeCacheFlushing",
                         "-Dfml.readTimeout=180",
+                        "@java9args.txt",
                         "-jar",
-                        "forge-1.7.10-10.13.4.1614-1.7.10-universal.jar",
+                        "lwjgl3ify-forgePatches.jar",
                         "nogui"
                 )
                         .directory(new File(currentDir))
